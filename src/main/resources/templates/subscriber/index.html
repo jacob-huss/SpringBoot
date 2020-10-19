@@ -2,36 +2,75 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Subscriber List</title>
 </head>
 
 <body>
-    <h1>Welcome to our AWESOME SITE!</h1>
-    <h3>Subscribe to our list. Sign-up below!</h3>
+    <div class="position-relative">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <div class="container">
+                    <h1 class="display-3" class="text-center">Welcome to our AWESOME SITE!</h1>
+                    <p class="lead" class="text-center">Subscribe to our list. Sign-up below!</p>
+                </div>
+            </div>
+            <div class="p-3 mb-2 bg-success text-white">
+                <h1 class="text-center">Please use the form below to sign up as a subscriber:</h1>
+            </div>
+            <div class="card">
+                <div class="card text-center">
+                    <div class="card text-white bg-dark mb-3">
+                        <img class="rounded-circle" class="card-img-top"
+                            src="https://media.istockphoto.com/vectors/sign-up-buttons-in-3d-style-with-arrow-sign-vector-id1207520671?k=6&m=1207520671&s=612x612&w=0&h=9Q0IkXKAQnhZK_KhgfEuwuf4OA2vJa0H3yHUztE2VkQ="
+                            alt="Subscription Form image cap">
+                        <div class="card-body" style="width: 18rem;">
+                            <h5 class="card-title">Subscription Form</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Do not use name in Username</h6>
+                            
 
-    <p>Please use the form below to sign up as a scriber:</p>
-    <form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
-        <table>
-        <tr>
-                <td>First Name:</td>
-            <td><input type="text" th:field="*{firstName}" /></td>
-        </tr>
-        <tr>
-            <td>Last Name:</td>
-            <td><input type="text" th:field="*{lastName}" /></td>
-        </tr>
-        <tr>
-                <td>Username:</td>
-            <td><input type="text" th:field="*{userName}" /></td>
-        </tr>
-        <tr>
-            <td><button type="submit">Submit Your Name</button></td>
-        </tr>
-        </table>
+
+                            <form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+                                
+                                <table>
+                                    <tr>
+                                        <td class="align-middle">First Name:</td>
+                                        <td><input type="text" th:field="*{firstName}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">Last Name:</td>
+                                        <td><input type="text" th:field="*{lastName}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">Username:</td>
+                                        <td><input type="text" th:field="*{userName}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle"><span class="border border-white"><button type="button" class="btn btn-success">Submit</button></span></td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </form>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
