@@ -13,55 +13,69 @@
 </head>
 
 <body>
-    <div class="position-relative">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="p-3 mb-2 bg-dark text-white">
-                <div class="container">
-                    <h1 class="display-3" class="text-center">Welcome to our AWESOME SITE!</h1>
-                    <p class="lead" class="text-center">Subscribe to our list. Sign-up below!</p>
+    <div class="p-3 mb-2 bg-danger">
+        <div class="position-relative">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="p-3 mb-2 bg-dark text-white">
+                    <div class="container-fluid">
+                        <h1 class="display-3 text-center">Welcome to our AWESOME SITE!</h1>
+                        <p class="lead text-center">Subscribe to our list. Sign-up below!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="p-3 mb-2 bg-success text-white">
-                <h1 class="text-center">Please use the form below to sign up as a subscriber:</h1>
-            </div>
-            <div class="card">
-                <div class="card text-center">
-                    <div class="card text-white bg-dark mb-3">
-                        <img class="rounded-circle" class="card-img-top"
-                            src="https://media.istockphoto.com/vectors/sign-up-buttons-in-3d-style-with-arrow-sign-vector-id1207520671?k=6&m=1207520671&s=612x612&w=0&h=9Q0IkXKAQnhZK_KhgfEuwuf4OA2vJa0H3yHUztE2VkQ="
-                            alt="Subscription Form image cap">
-                        <div class="card-body" style="width: 18rem;">
-                            <h5 class="card-title">Subscription Form</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Do not use name in Username</h6>
-                            
+                <div class="p-3 mb-2 bg-success text-white">
+                    <h1 class="text-center">Please use the form below to sign up as a subscriber:</h1>
+                </div>
+                <div class="mx-auto">
+                    <div class="card text-center text-white bg-dark mb-3">
+
+                        <img src="https://media.istockphoto.com/vectors/sign-up-buttons-in-3d-style-with-arrow-sign-vector-id1207520671?k=6&m=1207520671&s=612x612&w=0&h=9Q0IkXKAQnhZK_KhgfEuwuf4OA2vJa0H3yHUztE2VkQ="
+                            alt="Subscription Form image cap" class="img-fluid rounded-circle">
 
 
+
+                        <h5 class="card-title">Subscription Form</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Do not use name in Username</h6>
+                        <div class="mx-auto">
                             <form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
-                                
-                                <table>
+
+                                <table class="table table-striped table-dark text-center">
                                     <tr>
-                                        <td class="align-middle">First Name:</td>
+                                        <td class="align-center">First Name:</td>
                                         <td><input type="text" th:field="*{firstName}" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="align-middle">Last Name:</td>
+                                        <td class="align-center">Last Name:</td>
                                         <td><input type="text" th:field="*{lastName}" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="align-middle">Username:</td>
+                                        <td class="align-center">Username:</td>
                                         <td><input type="text" th:field="*{userName}" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="align-middle"><span class="border border-white"><button type="button" class="btn btn-success">Submit</button></span></td>
+                                        <td class="align-center"><span class="border border-white"><button type="button"
+                                                    class="btn btn-success"><svg width="1em" height="1em"
+                                                        viewBox="0 0 16 16" class="bi bi-bookmark-star"
+                                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                                        <path
+                                                            d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z" />
+                                                    </svg>Submit</button></span>
+                                        </td>
                                     </tr>
                                 </table>
                         </div>
                     </div>
+
+
                 </div>
             </div>
+            </form>
         </div>
     </div>
-    </form>
+    </div>
+    </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
